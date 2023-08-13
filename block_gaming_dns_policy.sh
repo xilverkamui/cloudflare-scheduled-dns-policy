@@ -15,7 +15,7 @@ url="https://api.cloudflare.com/client/v4/accounts/${account_id}/gateway/rules"
 data='{
     "name": "'"${dns_policy_name}"'",
     "action": "block",
-    "traffic": "http.categories @in [\"Gaming\"] or dns.name in {\"list.gaming\"}",
+    "traffic": "any(dns.content_category[*] in {100})",
     "enabled": true,
     "schedule": {
         "mon": "13:30-19:00",
