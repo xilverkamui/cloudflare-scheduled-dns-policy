@@ -35,8 +35,8 @@ The `block_gaming_dns_policy.sh` script is an example version of `create_dns_pol
 
 ## External Reference
 For more information about the Cloudflare API and how to use it effectively, please refer to:
-- https://developers.cloudflare.com/cloudflare-one/policies/gateway/dns-policies/scheduled-dns-policies/
-- https://developers.cloudflare.com/api/operations/zero-trust-gateway-rules-create-zero-trust-gateway-rule
 - https://developers.cloudflare.com/cloudflare-one/policies/gateway/dns-policies/
+- https://developers.cloudflare.com/cloudflare-one/policies/gateway/dns-policies/scheduled-dns-policies/
 - https://developers.cloudflare.com/cloudflare-one/policies/gateway/dns-policies/common-policies/
-- https://github.com/cloudflare/cloudflare-docs/blob/production/content/cloudflare-one/policies/gateway/dns-policies/_index.md
+- https://developers.cloudflare.com/api/operations/zero-trust-gateway-rules-create-zero-trust-gateway-rule
+- https://developers.cloudflare.com/cloudflare-one/policies/gateway/domain-categories/
