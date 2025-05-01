@@ -12,6 +12,10 @@ The `create_dns_policy.sh` script prompts you to enter Cloudflare account inform
 
 The `block_gaming_dns_policy.sh` script is an example version of `create_dns_policy.sh` specifically tailored for blocking gaming-related websites and content. It uses predefined traffic rules and a schedule focused on blocking gaming sites during specific times.
 
+### block_kids_dns_policy.sh
+
+The `block_kids_dns_policy.sh` script is an example version of `create_dns_policy.sh` specifically tailored for some domain listed in "specific" list. It uses predefined traffic rules and a schedule focused on blocking sites during specific times.
+
 ## How to Deploy and Run
 
 1. Clone this repository to your local machine:
@@ -33,10 +37,24 @@ The `block_gaming_dns_policy.sh` script is an example version of `create_dns_pol
    ```
 5. Follow the prompts to input the required information for creating the DNS policy with scheduled blocking.
 
+## How To
+### How to get List ID
+```bash
+curl -X GET "https://api.cloudflare.com/client/v4/accounts/{account_id}/gateway/lists" \
+     -H "Authorization: Bearer YOUR_API_TOKEN" \
+     -H "Content-Type: application/json"
+```
+### How to get Firewall Policy ID
+```bash
+curl -X GET "https://api.cloudflare.com/client/v4/accounts/{account_id}/gateway/rules" \
+     -H "Authorization: Bearer YOUR_API_TOKEN" \
+     -H "Content-Type: application/json"
+```
 ## External Reference
 For more information about the Cloudflare API and how to use it effectively, please refer to:
 - https://developers.cloudflare.com/cloudflare-one/policies/gateway/dns-policies/
-- https://developers.cloudflare.com/cloudflare-one/policies/gateway/dns-policies/scheduled-dns-policies/
+- https://developers.cloudflare.com/cloudflare-one/policies/gateway/dns-policies/timed-policies/
 - https://developers.cloudflare.com/cloudflare-one/policies/gateway/dns-policies/common-policies/
 - https://developers.cloudflare.com/api/operations/zero-trust-gateway-rules-create-zero-trust-gateway-rule
 - https://developers.cloudflare.com/cloudflare-one/policies/gateway/domain-categories/
+- https://developers.cloudflare.com/api/resources/zero_trust/subresources/gateway/subresources/rules/
